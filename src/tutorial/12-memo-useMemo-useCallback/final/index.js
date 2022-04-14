@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react'
+import React, { useState, useCallback, useMemo, useEffect } from 'react'
 import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
 
 // ATTENTION!!!!!!!!!!
@@ -67,9 +67,9 @@ const SingleProduct = ({ fields, addToCart }) => {
   price = price / 100
   const image = fields.image[0].url
 
-  // useEffect(() => {
-  //   console.count('hello from product');
-  // });
+  useEffect(() => {
+    console.count('hello from product');
+  });
   return (
     <article className='product'>
       <img src={image} alt={name} />
